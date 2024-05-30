@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "SCB_2F_CLW_a_0001_a2626b6d79d441c70f34c7d6a2d38b06.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

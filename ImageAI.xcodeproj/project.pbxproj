@@ -8,21 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		3A9680F62A1855D700D7DEE2 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9680F52A1855D700D7DEE2 /* ImageViewModel.swift */; };
-		3A9680F82A18655300D7DEE2 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3A9680F72A18655300D7DEE2 /* Resnet50.mlmodel */; };
 		3AB5B0E52850246A00687069 /* ImageAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB5B0E42850246A00687069 /* ImageAIApp.swift */; };
 		3AB5B0E72850246A00687069 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB5B0E62850246A00687069 /* ContentView.swift */; };
 		3AB5B0E92850246B00687069 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB5B0E82850246B00687069 /* Assets.xcassets */; };
 		3AB5B0EC2850246B00687069 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB5B0EB2850246B00687069 /* Preview Assets.xcassets */; };
+		DB23EE1F2C08320200FC4167 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DB23EE1E2C08320200FC4167 /* MobileNetV2.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A9680F52A1855D700D7DEE2 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
-		3A9680F72A18655300D7DEE2 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Resnet50.mlmodel; sourceTree = "<group>"; };
 		3AB5B0E12850246A00687069 /* ImageAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB5B0E42850246A00687069 /* ImageAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAIApp.swift; sourceTree = "<group>"; };
 		3AB5B0E62850246A00687069 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3AB5B0E82850246B00687069 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AB5B0EB2850246B00687069 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DB23EE1E2C08320200FC4167 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 				3AB5B0E82850246B00687069 /* Assets.xcassets */,
 				3AB5B0EA2850246B00687069 /* Preview Content */,
 				3A9680F52A1855D700D7DEE2 /* ImageViewModel.swift */,
-				3A9680F72A18655300D7DEE2 /* Resnet50.mlmodel */,
+				DB23EE1E2C08320200FC4167 /* MobileNetV2.mlmodel */,
 			);
 			path = ImageAI;
 			sourceTree = "<group>";
@@ -101,7 +101,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					3AB5B0E02850246A00687069 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -145,7 +145,7 @@
 			files = (
 				3AB5B0E72850246A00687069 /* ContentView.swift in Sources */,
 				3A9680F62A1855D700D7DEE2 /* ImageViewModel.swift in Sources */,
-				3A9680F82A18655300D7DEE2 /* Resnet50.mlmodel in Sources */,
+				DB23EE1F2C08320200FC4167 /* MobileNetV2.mlmodel in Sources */,
 				3AB5B0E52850246A00687069 /* ImageAIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,6 +190,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -251,6 +252,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

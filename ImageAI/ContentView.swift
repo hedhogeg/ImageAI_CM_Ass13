@@ -38,6 +38,9 @@ struct ContentView: View {
             Button("Classify") {
                 imageViewModel.classifyImage()
             }
+            Text(imageViewModel.predicted)
+                .padding()
+                .font(.system(size:24))
             
             Text(imageViewModel.classificationLabel)
                 .padding()

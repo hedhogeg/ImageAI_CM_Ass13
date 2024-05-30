@@ -1,9 +1,3 @@
-//
-//  ImageViewModel.swift
-//  ImageAI
-//
-//  Created by 김형관 on 2023/05/20.
-//
 
 import CoreML
 import Foundation
@@ -11,8 +5,8 @@ import SwiftUI
 
 
 class ImageViewModel: ObservableObject {
-
-    let images = ["signage", "bench", "bike", "bollard", "excavator", "truck", "person", "bridge", "wall", "crane", "building", "tunnel", "airplane", "car", "dog", "cat"]
+    let images = ["bird", "drum", "camera","signage", "bench", "bike", "bollard", "excavator", "truck", "person", "bridge", "wall", "crane", "building", "tunnel", "airplane", "car", "dog", "cat"]
+    @Published var predicted = ""
     @Published var classificationLabel = ""
     @Published var currentIndex: Int
 
@@ -20,12 +14,12 @@ class ImageViewModel: ObservableObject {
         currentIndex = 0
     }
     
-    let model: Resnet50 = {
+    let model: MobileNetV2 = {
         do {
             let config = MLModelConfiguration()
-            return try Resnet50(configuration: config)
+            return try MobileNetV2(configuration: config)
         } catch {
-            fatalError("Couldn't create Resnet50")
+            fatalError("Couldn't create MobileNetV2")
         }
     }()
     
@@ -40,9 +34,11 @@ class ImageViewModel: ObservableObject {
         
         if let output = try? model.prediction(image: buffer) {
             let results = output.classLabelProbs.sorted { $0.1 > $1.1 }
-            let result = results.map { (key, value) in
-                return "\(key) = \(String(format: "%.2f", value * 100))%"
-            }.joined(separator: "\n")
+            let result = results[0...2].map { (key, value) in
+                return "\(key) : \(String(format: "%.2f", value * 100))%"
+            }.joined(separator: "\n\n")
+            
+            predicted = results[0].key
             
             classificationLabel = result
         }
